@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Orders Routes
+Route::get('orders', 'OrderController@index');
+Route::post('orders', 'OrderController@create');
+
+// Webhook Routes
+Route::post('webhook', 'WebhookController@midtransHandler');
