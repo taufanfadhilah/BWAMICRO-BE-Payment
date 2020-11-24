@@ -70,7 +70,7 @@ class OrderController extends Controller
             'course_price' => $course['price'],
             'course_name' => $course['name'],
             'course_thumbnail' => $course['thumbnail'],
-            'course_level' => $coruse['level']
+            'course_level' => $course['level']
         ];
         $order->save();
         return response()->json([
