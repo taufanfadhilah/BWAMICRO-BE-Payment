@@ -31,7 +31,7 @@ class WebhookController extends Controller
             ], 400);
         }
 
-        $realOrderId = explode('-', $orderId);
+        $realOrderId = explode('-', $orderId)[0];
         $order = Order::find($realOrderId);
 
         if (!$order) {
